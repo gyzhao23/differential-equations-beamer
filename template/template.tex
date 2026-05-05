@@ -1,0 +1,207 @@
+% Template Beamer File for Differential Equations Chapter
+% Copy this file and modify the content for your specific chapter
+
+\input{preamble}
+
+\title[Chapter Title]{Chapter: Introduction to Differential Equations}
+\subtitle{Section 1.1 - Definitions and Terminology}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% ============================================================================
+% TITLE SLIDE
+% ============================================================================
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% ============================================================================
+% OUTLINE SLIDE
+% ============================================================================
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
+% ============================================================================
+% SECTION 1: DEFINITIONS
+% ============================================================================
+\section{Definitions}
+
+\begin{frame}
+    \frametitle{Section 1.1: Definitions and Terminology}
+    
+    In this section, we introduce fundamental concepts:
+    \begin{itemize}
+        \item Definition of differential equations
+        \item Classification of differential equations
+        \item Order and degree
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Definition 1: Differential Equation}
+    
+    \begin{definitionbox}{Differential Equation}
+        A \textbf{differential equation} is an equation that contains one or more derivatives of an unknown function with respect to one or more independent variables.
+        
+        \vspace{0.3cm}
+        
+        General form: $F(x, y, y', y'', \ldots, y^{(n)}) = 0$
+    \end{definitionbox}
+    
+    \pause
+    
+    \begin{examplebox}{Example}
+        The equations:
+        \begin{align*}
+            \dydx &= 2x \\
+            \dd2ydx2 + 5\dydx + 6y &= e^x
+        \end{align*}
+        are differential equations.
+    \end{examplebox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Definition 2: Order of a Differential Equation}
+    
+    \begin{definitionbox}{Order}
+        The \textbf{order} of a differential equation is the order of the highest derivative present in the equation.
+    \end{definitionbox}
+    
+    \pause
+    
+    \begin{examplebox}{Examples of Order}
+        \begin{align*}
+            \dydx &= 3x^2 \quad \text{(1st order)} \\
+            \dd2ydx2 - 4y &= 0 \quad \text{(2nd order)} \\
+            \frac{d^3y}{dx^3} + y &= \sin x \quad \text{(3rd order)}
+        \end{align*}
+    \end{examplebox}
+\end{frame}
+
+% ============================================================================
+% SECTION 2: THEOREMS
+% ============================================================================
+\section{Theorems}
+
+\begin{frame}
+    \frametitle{Theorem 1: Existence and Uniqueness}
+    
+    \begin{theorembox}{Existence and Uniqueness Theorem}
+        Let $R$ be a rectangular region in the $xy$-plane defined by $|x - x_0| \leq a$, $|y - y_0| \leq b$, and let
+        \[
+        f(x, y) \quad \text{and} \quad \frac{\partial f}{\partial y}
+        \]
+        be continuous on $R$. Then, there exists an interval $|x - x_0| \leq h$ (where $h > 0$) and a unique function $y(x)$ defined on this interval that satisfies the initial value problem:
+        \[
+        \dydx = f(x, y), \quad y(x_0) = y_0
+        \]
+    \end{theorembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Theorem 1 (continued)}
+    
+    \begin{examplebox}{Application}
+        For the IVP:
+        \begin{align*}
+            \dydx &= \sqrt{y} \\
+            y(0) &= 1
+        \end{align*}
+        
+        We have $f(x,y) = \sqrt{y}$ and $\frac{\partial f}{\partial y} = \frac{1}{2\sqrt{y}}$.
+        
+        Both are continuous in a neighborhood of $(0, 1)$, so a unique solution exists near $x = 0$.
+    \end{examplebox}
+\end{frame}
+
+% ============================================================================
+% SECTION 3: WORKED EXAMPLES
+% ============================================================================
+\section{Worked Examples}
+
+\begin{frame}
+    \frametitle{Example 1: Verifying a Solution}
+    
+    \begin{problembox}{Problem}
+        Verify that $y = e^{2x}$ is a solution to the differential equation:
+        \[
+        \dydx - 2y = 0
+        \]
+    \end{problembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example 1: Solution}
+    
+    \begin{examplebox}{Solution}
+        Given $y = e^{2x}$, we compute:
+        \[
+        \dydx = 2e^{2x}
+        \]
+        
+        Substituting into the differential equation:
+        \[
+        \dydx - 2y = 2e^{2x} - 2e^{2x} = 0 \quad \checkmark
+        \]
+        
+        Therefore, $y = e^{2x}$ is indeed a solution.
+    \end{examplebox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example 2: Solving a Simple ODE}
+    
+    \begin{problembox}{Problem}
+        Solve the differential equation:
+        \[
+        \dydx = 3x^2
+        \]
+    \end{problembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example 2: Solution}
+    
+    \begin{examplebox}{Solution}
+        Integrating both sides with respect to $x$:
+        \begin{align*}
+            \dydx &= 3x^2 \\
+            \int dy &= \int 3x^2 \, dx \\
+            y &= x^3 + C
+        \end{align*}
+        
+        where $C$ is an arbitrary constant.
+        
+        \vspace{0.3cm}
+        
+        \textbf{General solution:} $y = x^3 + C$
+    \end{examplebox}
+\end{frame}
+
+% ============================================================================
+% CONCLUSION SLIDE
+% ============================================================================
+\section{Summary}
+
+\begin{frame}
+    \frametitle{Summary}
+    
+    \begin{itemize}
+        \item A differential equation relates a function to its derivatives
+        \item The order is determined by the highest derivative present
+        \item The Existence and Uniqueness Theorem guarantees solutions under certain conditions
+        \item Solutions can be verified by substitution
+        \item Simple ODEs can often be solved by integration
+    \end{itemize}
+    
+    \vspace{1cm}
+    
+    \centering
+    \Large \textbf{Thank you!}
+\end{frame}
+
+\end{document}
