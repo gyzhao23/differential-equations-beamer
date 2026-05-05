@@ -1,0 +1,128 @@
+%% Preamble - Common setup for all beamer presentations
+%% Include this file in your chapter presentations
+
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{shadows, arrows, shapes}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{geometry}
+
+% Custom colors (import from custom_colors.tex if available)
+\definecolor{defcolor}{RGB}{230, 245, 250}
+\definecolor{defborder}{RGB}{0, 102, 204}
+\definecolor{thmcolor}{RGB}{245, 230, 250}
+\definecolor{thmborder}{RGB}{153, 51, 153}
+\definecolor{excolor}{RGB}{240, 255, 240}
+\definecolor{exborder}{RGB}{34, 139, 34}
+\definecolor{probcolor}{RGB}{255, 250, 240}
+\definecolor{probborder}{RGB}{255, 140, 0}
+
+% Beamer Theme
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% tcolorbox environment definitions
+
+%% Definition Box
+\newtcolorbox{definitionbox}[1]{
+  colback=defcolor,
+  colframe=defborder,
+  coltitle=white,
+  colbacktitle=defborder,
+  title=#1,
+  fonttitle=\bfseries\large,
+  boxrule=2pt,
+  arc=5pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  shadow={2pt}{-2pt}{0pt}{black!20},
+  enhanced
+}
+
+%% Theorem Box
+\newtcolorbox{theorembox}[1]{
+  colback=thmcolor,
+  colframe=thmborder,
+  coltitle=white,
+  colbacktitle=thmborder,
+  title=#1,
+  fonttitle=\bfseries\large,
+  boxrule=2pt,
+  arc=5pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  shadow={2pt}{-2pt}{0pt}{black!20},
+  enhanced
+}
+
+%% Example Box
+\newtcolorbox{examplebox}[1]{
+  colback=excolor,
+  colframe=exborder,
+  coltitle=white,
+  colbacktitle=exborder,
+  title=#1,
+  fonttitle=\bfseries\large,
+  boxrule=2pt,
+  arc=5pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  shadow={2pt}{-2pt}{0pt}{black!20},
+  enhanced
+}
+
+%% Problem Box
+\newtcolorbox{problembox}[1]{
+  colback=probcolor,
+  colframe=probborder,
+  coltitle=white,
+  colbacktitle=probborder,
+  title=#1,
+  fonttitle=\bfseries\large,
+  boxrule=2pt,
+  arc=5pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  shadow={2pt}{-2pt}{0pt}{black!20},
+  enhanced
+}
+
+% Custom commands
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\dd}[1]{\frac{d}{d#1}}
+\newcommand{\dydx}{\frac{dy}{dx}}
+\newcommand{\dd2ydx2}{\frac{d^2y}{dx^2}}
+
+% Title page formatting
+\title[Your Chapter Title]{Your Chapter Title}
+\author{Author Name}
+\institute{Institution}
+\date{\today}
+
+% Remove the footer from title page
+\setbeamertemplate{footline}{}
