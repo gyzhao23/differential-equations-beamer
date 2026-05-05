@@ -1,0 +1,113 @@
+% Chapter 2: First-Order Differential Equations
+% Template file - Replace this content with your chapter material
+
+\input{preamble}
+
+\title[Chapter 2]{Chapter 2: First-Order Differential Equations}
+\subtitle{Solution Methods and Applications}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chapter Overview}
+    \tableofcontents
+\end{frame}
+
+\section{Separable Equations}
+
+\begin{frame}
+    \frametitle{Separable Differential Equations}
+    
+    \begin{definitionbox}{Separable Equation}
+        A first-order differential equation of the form
+        \[
+        M(x) + N(y)\dydx = 0
+        \]
+        is called \textbf{separable}.
+    \end{definitionbox}
+\end{frame}
+
+\section{Linear Equations}
+
+\begin{frame}
+    \frametitle{Linear First-Order Equations}
+    
+    \begin{definitionbox}{Standard Form}
+        A linear first-order differential equation has the form:
+        \[
+        \dydx + P(x)y = Q(x)
+        \]
+        where $P(x)$ and $Q(x)$ are continuous functions.
+    \end{definitionbox}
+\end{frame}
+
+\section{Exact Equations}
+
+\begin{frame}
+    \frametitle{Exact Differential Equations}
+    
+    \begin{theorembox}{Exactness Criterion}
+        The equation $M(x,y) + N(x,y)\dydx = 0$ is exact if and only if:
+        \[
+        \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}
+        \]
+    \end{theorembox}
+\end{frame}
+
+\section{Applications}
+
+\begin{frame}
+    \frametitle{Applications of First-Order ODE}
+    
+    \begin{itemize}
+        \item Exponential growth and decay
+        \item Newton's law of cooling
+        \item Population dynamics
+        \item Chemical reactions
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example: Exponential Decay}
+    
+    \begin{problembox}{Problem}
+        A radioactive substance has a half-life of 1600 years. If there are initially 100 grams, find the amount remaining after 3200 years.
+    \end{problembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example Solution}
+    
+    \begin{examplebox}{Solution}
+        The exponential decay model is $\frac{dA}{dt} = -kA$.
+        
+        Solution: $A(t) = A_0 e^{-kt}$
+        
+        Using half-life: $50 = 100e^{-k \cdot 1600}$
+        
+        Solving: $k = \frac{\ln 2}{1600}$
+        
+        After 3200 years: $A(3200) = 100 e^{-k \cdot 3200} = 100 e^{-2\ln 2} = 25$ grams
+    \end{examplebox}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+    \frametitle{Summary}
+    
+    \begin{itemize}
+        \item Separable equations can be solved by integration
+        \item Linear equations use integrating factor method
+        \item Exact equations have special solution structure
+        \item Many real-world phenomena follow first-order models
+    \end{itemize}
+\end{frame}
+
+\end{document}
