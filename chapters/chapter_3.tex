@@ -1,0 +1,153 @@
+% Chapter 3: Higher-Order Linear Differential Equations
+% Template file - Replace this content with your chapter material
+
+\input{preamble}
+
+\title[Chapter 3]{Chapter 3: Higher-Order Linear Differential Equations}
+\subtitle{Methods and Solutions}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chapter Overview}
+    \tableofcontents
+\end{frame}
+
+\section{Linear Equations}
+
+\begin{frame}
+    \frametitle{General Theory}
+    
+    \begin{definitionbox}{Linear Homogeneous Equation}
+        An $n$-th order linear homogeneous differential equation has the form:
+        \[
+        a_n(x)\ddnydxn{n} + a_{n-1}(x)\ddnydxn{n-1} + \cdots + a_1(x)\dydx + a_0(x)y = 0
+        \]
+    \end{definitionbox}
+\end{frame}
+
+\section{Constant Coefficients}
+
+\begin{frame}
+    \frametitle{Second-Order with Constant Coefficients}
+    
+    \begin{definitionbox}{Standard Form}
+        The equation
+        \[
+        a\dd2ydx2 + b\dydx + cy = 0
+        \]
+        has the \textbf{characteristic equation}:
+        \[
+        ar^2 + br + c = 0
+        \]
+    \end{definitionbox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution Cases}
+    
+    \begin{theorembox}{Case 1: Distinct Real Roots}
+        If $r_1 \neq r_2$ are real, then the general solution is:
+        \[
+        y = c_1 e^{r_1 x} + c_2 e^{r_2 x}
+        \]
+    \end{theorembox}
+    
+    \pause
+    
+    \begin{theorembox}{Case 2: Repeated Real Root}
+        If $r_1 = r_2 = r$, then:
+        \[
+        y = c_1 e^{rx} + c_2 x e^{rx}
+        \]
+    \end{theorembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution Cases (continued)}
+    
+    \begin{theorembox}{Case 3: Complex Conjugate Roots}
+        If $r = \alpha \pm i\beta$, then:
+        \[
+        y = e^{\alpha x}(c_1 \cos \beta x + c_2 \sin \beta x)
+        \]
+    \end{theorembox}
+\end{frame}
+
+\section{Examples}
+
+\begin{frame}
+    \frametitle{Example 1: Distinct Real Roots}
+    
+    \begin{problembox}{Problem}
+        Solve: $\dd2ydx2 - 3\dydx + 2y = 0$ with $y(0) = 1$, $y'(0) = 0$
+    \end{problembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution}
+    
+    \begin{examplebox}{Solution}
+        Characteristic equation: $r^2 - 3r + 2 = 0$
+        
+        Factoring: $(r-1)(r-2) = 0$, so $r_1 = 1, r_2 = 2$
+        
+        General solution: $y = c_1 e^x + c_2 e^{2x}$
+        
+        Using $y(0) = 1$: $c_1 + c_2 = 1$
+        
+        Using $y'(0) = 0$: $c_1 + 2c_2 = 0$
+        
+        Solving: $c_1 = 2, c_2 = -1$
+        
+        \textbf{Particular solution:} $y = 2e^x - e^{2x}$
+    \end{examplebox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example 2: Complex Roots}
+    
+    \begin{problembox}{Problem}
+        Solve: $\dd2ydx2 + 2\dydx + 2y = 0$
+    \end{problembox}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution}
+    
+    \begin{examplebox}{Solution}
+        Characteristic equation: $r^2 + 2r + 2 = 0$
+        
+        Using the quadratic formula:
+        \[
+        r = \frac{-2 \pm \sqrt{4-8}}{2} = \frac{-2 \pm 2i}{2} = -1 \pm i
+        \]
+        
+        So $\alpha = -1, \beta = 1$
+        
+        General solution:
+        \[
+        y = e^{-x}(c_1 \cos x + c_2 \sin x)
+        \]
+    \end{examplebox}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+    \frametitle{Summary}
+    
+    \begin{itemize}
+        \item Higher-order linear equations with constant coefficients are solved via characteristic equation
+        \item Solutions depend on whether roots are distinct, repeated, or complex
+        \item Initial conditions determine the constants
+    \end{itemize}
+\end{frame}
+
+\end{document}
